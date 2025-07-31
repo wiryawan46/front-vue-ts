@@ -26,6 +26,24 @@ const routes: RouteRecordRaw[] = [
         component: () => import( /* webpackChunkName: "home" */ '../views/admin/dashboard/index.vue'),
         meta: { requiresAuth: true } // <-- Add meta field
     },
+    {
+        path: '/admin/users',
+        name: 'admin.users.index',
+        component: () => import( /* webpackChunkName: "home" */ '../views/admin/users/index.vue'),
+        meta: { requiresAuth: true } // <-- Add meta field
+    },
+    {
+        path: '/admin/users/create',
+        name: 'admin.users.create',
+        component: () => import( /* webpackChunkName: "home" */ '../views/admin/users/create.vue'),
+        meta: { requiresAuth: true } // <-- Add meta field
+    },
+    {
+        path: '/admin/users/edit/:id',
+        name: 'admin.users.edit',
+        component: () => import( /* webpackChunkName: "home" */ '../views/admin/users/edit.vue'),
+        meta: { requiresAuth: true } // <-- Add meta field
+    }
 ]
 
 const router = createRouter({
