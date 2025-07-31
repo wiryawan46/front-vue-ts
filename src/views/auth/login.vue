@@ -24,12 +24,12 @@ const handleLogin = (e: Event) => {
     password: password.value
   }, {
     onSuccess: (data: any) => {
-      Cookies.set("token", data.token)
+      Cookies.set("token", data.data.token)
       Cookies.set("user", JSON.stringify({
-        id: data.data.data.id,
-        name: data.data.data.name,
-        username: data.data.data.username,
-        email: data.data.data.email
+        id: data.data.id,
+        name: data.data.name,
+        username: data.data.username,
+        email: data.data.email
       }))
 
       router.push("/admin/dashboard")
@@ -39,7 +39,6 @@ const handleLogin = (e: Event) => {
     }
   })
 }
-
 </script>
 
 <template>

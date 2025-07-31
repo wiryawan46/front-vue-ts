@@ -6,6 +6,6 @@ export const useLogout = (): (() => void) => {
     return (): void => {
         Cookies.remove("token");
         Cookies.remove("user");
-        router.push({name: "/login"});
+        router.push("/login");
     }
 }
